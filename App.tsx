@@ -9,7 +9,7 @@ const queryClient = new QueryClient();
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ScrollView>
+
       <View>
         <SafeAreaView style={styles.nav}>
           <View>
@@ -19,9 +19,11 @@ export default function App() {
             </View>
           </View>
         </SafeAreaView>
-        <News />
+        <ScrollView>
+          <News />
+        </ScrollView>
       </View>
-      </ScrollView>
+
     </QueryClientProvider>
   )
 }

@@ -10,13 +10,20 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-masked-view/masked-view": "^0.2.9",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/stack": "^6.3.17",
     "@tanstack/react-query": "^4.32.6",
+    "antd": "^5.8.3",
     "axios": "^1.4.0",
+    "expo-linear-gradient": "^12.3.0",
+    "lottie-react-native": "^6.1.2",
     "react": "18.2.0",
     "react-native": "0.72.3",
-    "react-native-screens": "^3.24.0"
+    "react-native-linear-gradient": "^2.8.2",
+    "react-native-screens": "^3.24.0",
+    "react-native-shimmer-placeholder": "^2.0.9",
+    "react-native-skeleton-placeholder": "^5.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

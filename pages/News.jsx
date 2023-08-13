@@ -12,7 +12,7 @@ import axios from 'axios';
 import {useQuery} from '@tanstack/react-query';
 
 export default function News() {
-  const {data, refetch} = useQuery(['news'], () =>
+  const {data, isLoading, isError, refetch} = useQuery(['news'], () =>
     axios
       .get(
         `https://newsapi.org/v2/top-headlines?category=${category}&country=in&apiKey=0a896ee86f6b404b8a695b5e43449f30`,
@@ -68,7 +68,7 @@ export default function News() {
 
   const articles = data?.articles || [];
 
-  const inputAccessoryViewID = 'uniqueID';
+  const inputAccessoryViewID = 'inputAccessoryViewID';
 
   return (
     <>
@@ -82,9 +82,12 @@ export default function News() {
           onChangeText={setCategory}
           placeholder={'Enter Category'}
           inputAccessoryViewID={inputAccessoryViewID}
+          placeholderTextColor="#000000"
         />
 
-        <Text style={styles.searchBtn} onPress={refetch}>Search</Text>
+        <Text style={styles.searchBtn} onPress={refetch}>
+          Search
+        </Text>
       </View>
       <View>
         {articles.map((news, key) => (
@@ -149,11 +152,10 @@ const styles = StyleSheet.create({
 
   searchInput: {
     padding: 15,
-    backgroundColor: '#ffffff',
-    color: '#000000',
     padding: 10,
     fontSize: 12,
     width: '80%',
+    borderWidth: 1,
   },
 
   searchBtn: {
