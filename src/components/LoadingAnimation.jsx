@@ -1,25 +1,16 @@
-// import React, { useEffect, useState } from 'react';
-// import { View, StyleSheet } from 'react-native';
-// import LottieView from 'lottie-react-native';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
-// const LoadingAnimation = () => {
-//   return (
-//     <View style={styles.container}>
-//       <LottieView
-//         source={require('../assets/loading-animation.json')}
-//         autoPlay
-//         loop
-//       />
-//     </View>
-//   );
-// };
+export default function LoadingAnimation() {
+  return (
+    <View>
+      <Text style={styles.loadingText}>LoadingAnimation</Text>
+    </View>
+  )
+}
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-// });
-
-// export default LoadingAnimation;
+const styles = StyleSheet.create({
+  loadingText:{
+    marginTop: 300
+  }
+})
